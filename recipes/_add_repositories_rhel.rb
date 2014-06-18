@@ -18,4 +18,4 @@
 
 # Include yum to update cache and add repoforge
 include_recipe 'yum::yum'
-include_recipe 'yum::epel'
+include_recipe 'yum-epel'

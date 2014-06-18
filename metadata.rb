@@ -4,7 +4,7 @@ maintainer_email 'sebgrewe@bigpoint.net'
 license 'Apache 2.0'
 description 'Install and configures pnp4nagios for Icinga/Nagios'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version           "0.1.14"
+version           "0.2.0"
 
 recipe 'rrdcached', 'Install and configures a simple default rrdcache installation.'
 recipe 'rrdcached::_dependencies', 'Installs required software.'
@@ -43,6 +43,7 @@ depends 'apt'
 depends 'apt'
 depends 'apt'
 depends 'yum'
+depends 'yum-epel'
 depends 'apache2'
 
 suggests 'icinga'
