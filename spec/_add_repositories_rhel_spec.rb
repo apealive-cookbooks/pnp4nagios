@@ -11,7 +11,7 @@
       @chef_run.converge "pnp4nagios::_add_repositories_#{platform}"
       @chef_run
     }
-    %w(yum::yum yum::epel).each do |rcp|
+    %w(yum::yum yum-epel).each do |rcp|
       it "should include recipe #{rcp}" do
         @chef_run.should include_recipe rcp
       end
