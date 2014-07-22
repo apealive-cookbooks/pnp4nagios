@@ -4,7 +4,7 @@ maintainer_email 'sebgrewe@bigpoint.net'
 license 'Apache 2.0'
 description 'Install and configures pnp4nagios for Icinga/Nagios'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version           "0.1.17"
+version           "0.2.0"
 
 recipe 'rrdcached', 'Install and configures a simple default rrdcache installation.'
 recipe 'rrdcached::_dependencies', 'Installs required software.'
@@ -22,7 +22,7 @@ supports 'debian'
 attribute 'pnp4nagios/version',
   :display_name => 'pnp4nagios version',
   :description => 'Version to be installed, only used for Debian backports right now.',
-  :default => '0.6.12-1~bpo60+1'
+  :default => '0.6.19-1~debmon60+2'
 
 attribute 'pnp4nagios/config/rrdbase',
   :display_name => 'pnp4nagios Perfdata Path',
@@ -43,6 +43,7 @@ depends 'apt'
 depends 'apt'
 depends 'apt'
 depends 'yum'
+depends 'yum-epel'
 depends 'apache2'
 
 suggests 'icinga'
