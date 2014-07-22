@@ -27,7 +27,7 @@ end
 
 # pnp4nagios
 default['pnp4nagios']['config']['rrdbase'] = '/var/lib/pnp4nagios/perfdata/'
-default['pnp4nagios']['version'] = '0.6.12-1~bpo60+1'
+default['pnp4nagios']['version'] = '0.6.19-1~debmon60+2'
 default['pnp4nagios']['htpasswd']['file'] = '/etc/pnp4nagios/htpasswd.users'
 default['pnp4nagios']['setup']['config']['vhost']['alias_url'] = '/pnp4nagios'
 default['pnp4nagios']['setup']['config']['vhost']['auth_name'] = 'Restricted Access'
