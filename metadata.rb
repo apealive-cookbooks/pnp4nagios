@@ -22,7 +22,7 @@ supports 'debian'
 attribute 'pnp4nagios/version',
   :display_name => 'pnp4nagios version',
   :description => 'Version to be installed, only used for Debian backports right now.',
-  :default => '0.6.12-1~bpo60+1'
+  :default => '0.6.19-1~debmon60+2'
 
 attribute 'pnp4nagios/config/rrdbase',
   :display_name => 'pnp4nagios Perfdata Path',
