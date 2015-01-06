@@ -19,6 +19,13 @@
 
 include_recipe 'pnp4nagios::_define_services'
 
+directory "#{node['apache']['dir']}/conf.d" do
+  owner node[:apache][:user]
+  group node[:apache][:group]
+  recursive true
+  mode 0744
+end
+
 # pnp4nagios templates
 template "#{node['apache']['dir']}/conf.d/pnp4nagios.conf" do
   source 'pnp4nagios/pnp4nagios.conf.erb'
