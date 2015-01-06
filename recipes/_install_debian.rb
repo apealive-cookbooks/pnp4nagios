@@ -16,7 +16,14 @@
 # limitations under the License.
 #
 
-package 'pnp4nagios pnp4nagios-web' do
-  action :install
-  options '-t debmon-' + node['lsb']['codename'] 
+case node['platform']
+when 'debian'
+    package 'pnp4nagios pnp4nagios-web' do
+      action :install
+      options '-t debmon-' + node['lsb']['codename'] 
+    end
+when 'ubuntu'
+    package 'pnp4nagios pnp4nagios-web' do
+      action :install
+    end
 end
